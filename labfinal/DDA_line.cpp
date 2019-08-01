@@ -1,18 +1,10 @@
 #include<stdio.h>
 #include<graphics.h>;
 using namespace std;
-
-int main()
+void dda_line(int x1,int y1,int x2,int y2)
 {
-    int gdriver = DETECT,gmode;
-    initgraph(&gdriver,&gmode,"");
-
     double x,y,xinc,yinc;
-    int x1,y1,x2,y2,dx,dy,length;
-    printf("Enter the starting coordinates: ");
-    scanf("%d%d",&x1,&y1);
-    printf("Enter the ending coordinates: ");
-    scanf("%d%d",&x2,&y2);
+    int dx,dy,length;
     dx=x2-x1;
     dy=y2-y1;
     if(abs(dx)>abs(dy))
@@ -31,6 +23,19 @@ int main()
         y=y+yinc;
         delay(20);
     }
+
+}
+int main()
+{
+    int gdriver = DETECT,gmode;
+    initgraph(&gdriver,&gmode,"");
+
+    int x1,y1,x2,y2;
+    printf("Enter the starting coordinates: ");
+    scanf("%d%d",&x1,&y1);
+    printf("Enter the ending coordinates: ");
+    scanf("%d%d",&x2,&y2);
+    dda_line(x1,y1,x2,y2);
     getch();
     closegraph();
     return 0;
