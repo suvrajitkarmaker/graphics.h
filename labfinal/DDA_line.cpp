@@ -15,7 +15,7 @@ void dda_line(int x1,int y1,int x2,int y2)
     yinc=dy/(double)length;
     x=x1;
     y=y1;
-    putpixel(x,y,10);
+    putpixel(x,y,WHITE);
     for(int i=0; i<length; i++)
     {
         putpixel(x,y,WHITE);
