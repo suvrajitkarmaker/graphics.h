@@ -16,13 +16,13 @@ void Bresenham_line(int x1,int y1,int x2,int y2)
     {
         if(tm<0)
         {
-            putpixel(x,y,7);
+            putpixel(x,y,WHITE);
             delay(20);
             tm=tm+2*dy;
         }
         else
         {
-            putpixel(x,y,7);
+            putpixel(x,y,WHITE);
             delay(20);
             y=y+1;
             tm=tm+2*dy-2*dx;
