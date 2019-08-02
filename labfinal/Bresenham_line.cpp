@@ -3,6 +3,12 @@
 using namespace std;
 void Bresenham_line(int x1,int y1,int x2,int y2)
 {
+    if(x1>x2)
+    {
+        swap(x1,x2);
+        swap(y1,y2);
+
+    }
     int dx, dy, tm, x, y;
 
     dx=x2-x1;
